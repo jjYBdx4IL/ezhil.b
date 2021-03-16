@@ -18,10 +18,10 @@
 
 		{{ $data := .Data }}
 		<div class="tag-cloud">
-		{{ range $key, $value := .Data.Terms.ByCount }}
+		{{ range $key, $value := .Data.Terms.Alphabetical }}
 			{{ $size := (add (mul (div $value.Count $biggest) (sub $max $min)) $min) }}
 			{{ $size := (cond (eq $biggest $smallest) $min $size) }}
-			<a style="font-size: {{ $size }}rem;" href="{{ $.Site.LanguagePrefix | absURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}.html">{{ $value.Name }}</a>
+			<a style="font-size: {{ $size }}rem;" href="{{ $.Site.LanguagePrefix | absURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}.html">{{ $value.Name }} ({{ $value.Count }})</a>
 		{{ end }}
 		</div>
 	</div>

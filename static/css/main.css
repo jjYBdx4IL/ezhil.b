@@ -350,6 +350,7 @@ pre code {
 
 .tag-cloud a {
     margin-right: 15px;
+    white-space: nowrap;
 }
 
 .pagination {
