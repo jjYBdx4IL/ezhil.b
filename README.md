@@ -1,13 +1,8 @@
-# Ezhil
+# ezhil.b
 
 Clean and minimal personal blog and portfolio theme for Hugo.
 
-## Demo
-
-[View demo](https://ezhil-hugo.netlify.com/)
-
-![Screenshot](images/screenshot-light.png "Ezhil light theme")
-![Screenshot](images/screenshot-dark.png "Ezhil dark theme")
+Based on: ezhil - https://github.com/vividvilla/ezhil
 
 ## Features
 
@@ -22,6 +17,8 @@ Clean and minimal personal blog and portfolio theme for Hugo.
 * Disqus comments
 * Hugo RSS feeds
 * Custom CSS/JS
+* Support storage of image/asset files along markdown sources and use relative linking instead of static dir
+* Article list page for each tag
 
 ## Installation
 
@@ -29,7 +26,7 @@ From your Hugo site run the following.
 
 ```sh
 cd themes
-git clone https://github.com/vividvilla/ezhil.git
+git clone https://github.com/jjYBdx4IL/ezhil.b.git
 ```
 
 For more information read the [official setup guide](https://gohugo.io/overview/installing/) of Hugo.
@@ -40,7 +37,9 @@ For more information read the [official setup guide](https://gohugo.io/overview/
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My personal blog"
-theme = "ezhil"
+theme = "ezhil.b"
+# necessary to make relative linking of images in markdown possible:
+uglyurls = true
 
 copyright = "© Copyright notice"
 
@@ -100,17 +99,17 @@ weight = 1
 
 [[menu.main]]
 name = "All posts"
-url = "/posts"
+url = "/posts.html"
 weight = 2
 
 [[menu.main]]
 name = "About"
-url = "/about"
+url = "/about.html"
 weight = 3
 
 [[menu.main]]
 name = "Tags"
-url = "/tags"
+url = "/tags.html"
 weight = 4
 
 # Social media links which shows up on site header.
