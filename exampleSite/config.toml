@@ -24,6 +24,8 @@ summaryLength = 20
 	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
 	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
 	# customJS = ["https://code.jquery.com/jquery-3.4.1.js", "js/custom1.js"]  # Custom JS scripts.
+    # control, what is shown on your main page
+    mainSections = ["posts"]
 
 [[menu.main]]
 name = "Home"

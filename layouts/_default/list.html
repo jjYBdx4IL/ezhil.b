@@ -15,7 +15,7 @@
 		{{ with .Content }}{{ . }}{{ end }}
 
 		<ul class="posts">
-			{{- range .Data.Pages -}}
+			{{- range sort .Data.Pages "Params.start" "desc" -}}
             {{ .Render "summary" }}
 			{{- end -}}
 		</ul>
