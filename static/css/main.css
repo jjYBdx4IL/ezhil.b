@@ -191,8 +191,13 @@ ul {
     background-color: #FAFAFA;
 }
 
+code {
+    border-style: outset;
+}
+
 pre code {
-  display: inline-block;
+    display: inline-block;
+    border-style: none;
 }
   
 
